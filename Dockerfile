@@ -1,6 +1,6 @@
 # Build stage — not strictly needed for a pure HTML site,
 # but gives a clean, reproducible copy of only the files we want.
-FROM nginx:1.27-alpine
+FROM nginx:1.27-alpine AS production
 
 # Remove the default nginx page
 RUN rm -rf /usr/share/nginx/html/*
